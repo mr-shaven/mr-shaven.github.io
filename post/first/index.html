@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Git Commit 规范化 - 归零 - 放空心态的学习。</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="六部侍郎" /><meta name="description" content="目的：统一团队的Git Commit日志标准， 便于后续代码review和快速查找问题 参考 angular 的commit，中文版本git-commit-sty" /><meta name="keywords" content="blog, golang, hugo" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.55.6 with theme even" />
+
+
+<link rel="canonical" href="https://shaven.github.io/post/first/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="Git Commit 规范化" />
+<meta property="og:description" content="目的：统一团队的Git Commit日志标准， 便于后续代码review和快速查找问题 参考 angular 的commit，中文版本git-commit-sty" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://shaven.github.io/post/first/" />
+<meta property="article:published_time" content="2020-01-23T21:06:02&#43;08:00"/>
+<meta property="article:modified_time" content="2020-01-23T21:06:02&#43;08:00"/>
+
+<meta itemprop="name" content="Git Commit 规范化">
+<meta itemprop="description" content="目的：统一团队的Git Commit日志标准， 便于后续代码review和快速查找问题 参考 angular 的commit，中文版本git-commit-sty">
+
+
+<meta itemprop="datePublished" content="2020-01-23T21:06:02&#43;08:00" />
+<meta itemprop="dateModified" content="2020-01-23T21:06:02&#43;08:00" />
+<meta itemprop="wordCount" content="748">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Git Commit 规范化"/>
+<meta name="twitter:description" content="目的：统一团队的Git Commit日志标准， 便于后续代码review和快速查找问题 参考 angular 的commit，中文版本git-commit-sty"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">归零。</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">首页</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">标签</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">分类</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">关于我</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">归零。</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">首页</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">标签</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">分类</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">关于我</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Git Commit 规范化</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2020-01-23 </span>
+        
+          <span class="more-meta"> 约 748 字 </span>
+          <span class="more-meta"> 预计阅读 2 分钟 </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#commit-message日志基本规范">Commit Message日志基本规范</a></li>
+<li><a href="#type-类型">Type&lt;类型&gt;</a></li>
+<li><a href="#scope">scope</a>
+<ul>
+<li>
+<ul>
+<li><a href="#subject">subject</a></li>
+<li><a href="#body">body</a></li>
+<li><a href="#footer">footer</a></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      
+
+<p>目的：统一团队的Git Commit日志标准， 便于后续代码review和快速查找问题</p>
+
+<p>参考 <a href="https://github.com/angular/angular">angular</a> 的commit，中文版本<a href="https://github.com/feflow/git-commit-style-guide">git-commit-stype-guide</a></p>
+
+<h2 id="commit-message日志基本规范">Commit Message日志基本规范</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">&lt;type&gt;(&lt;scope&gt;): &lt;subject&gt;
+&lt;BLANK LINE&gt; //空一行
+&lt;body&gt;
+&lt;BLANK LINE&gt; //空一行
+&lt;footer&gt;</pre></td></tr></table>
+</div>
+</div>
+<p>type是<u><strong>必选项</strong></u>，scope可选项，subject是<strong><u>必选项</u></strong>，body和footer可选项。</p>
+
+<h2 id="type-类型">Type&lt;类型&gt;</h2>
+
+<p>代表每次提交的类型，具体有如下：</p>
+
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>描述</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>feat</td>
+<td>新增功能</td>
+</tr>
+
+<tr>
+<td>fix</td>
+<td>修复bug</td>
+</tr>
+
+<tr>
+<td>improvement</td>
+<td>对当前功能的改进</td>
+</tr>
+
+<tr>
+<td>docs</td>
+<td>仅仅修改了文档</td>
+</tr>
+
+<tr>
+<td>style</td>
+<td>不影响代码逻辑的修改(空格、格式等)</td>
+</tr>
+
+<tr>
+<td>refactor</td>
+<td>代码重构，既没新增功能也没修复bug</td>
+</tr>
+
+<tr>
+<td>perf</td>
+<td>优化相关，比如提升性能、访问速度、体验等等</td>
+</tr>
+
+<tr>
+<td>test</td>
+<td>测试用例，比如单元测试、集成测试等</td>
+</tr>
+
+<tr>
+<td>chore</td>
+<td>构建过程或辅助工具的变动</td>
+</tr>
+
+<tr>
+<td>revert</td>
+<td>回滚到上一个版本</td>
+</tr>
+
+<tr>
+<td>build</td>
+<td>影响构建系统或外部依赖项的更改(例如作用域:gulp、broccoli、npm)</td>
+</tr>
+
+<tr>
+<td>ci</td>
+<td>对CI配置文件和脚本的更改(示例范围:Travis、Circle、BrowserStack、SauceLabs)</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="scope">scope</h2>
+
+<p>用来说明本次Commit的影响范围，即简要说明修改会涉及的部分，比如应用层、模型层等，可为空。</p>
+
+<h4 id="subject">subject</h4>
+
+<p>本次Commit的简短描述</p>
+
+<h4 id="body">body</h4>
+
+<p>对本次Commit的详细描述，可分为多行，可为空</p>
+
+<h4 id="footer">footer</h4>
+
+<p>分两部分</p>
+
+<ul>
+<li>关闭issue【针对开源项目】</li>
+</ul>
+
+<blockquote>
+<p>如果当前commit是针对某个issue，则可以以关闭，例如 Close #123
+* 不兼容变动</p>
+
+<p>如果当前代码与上一个版本不兼容，则 <code>Footer</code> 部分以<code>BREAKING CHANGE</code>开头，后面是对变动的描述、以及变动理由和迁移方法</p>
+</blockquote>
+
+<p>当然了，也有一些工具，比如<a href="https://github.com/commitizen/cz-cli">Commitizen</a></p>
+
+<p><strong>安装使用Commitizen</strong></p>
+
+<ul>
+<li><code>javascript
+npm install -g commitizen
+npm init --yes
+commitizen init cz-conventional-changelog --save --save-exact
+</code>
+
+安装完毕，使用<code>git cz</code>代替<code>git commit</code>命令即可
+
+<strong>全局安装</strong>
+
+在根目录创建.czrc文件，安装插件且写入cz适配器配置
+
+&gt; npm install -g commitizen cz-conventional-changelog
+&gt;
+&gt; echo &lsquo;{ &ldquo;path&rdquo;: &ldquo;cz-conventional-changelog&rdquo; }&rsquo; &gt; .czrc</li>
+</ul>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">六部侍郎</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2020-01-23
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      
+      <nav class="post-nav">
+        
+        <a class="next" href="/post/chinese-preview/">
+            <span class="next-text nav-default">[中文] 《长恨歌》</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+  <a href="https://shaven.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2020
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">六部侍郎</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  <script src="/lib/highlight/highlight.pack.js?v=20171001"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>
