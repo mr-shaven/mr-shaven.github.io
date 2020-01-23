@@ -6,7 +6,7 @@
     <description>Recent content in git on 归零 - 放空心态的学习。</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 23 Jan 2020 21:06:02 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 24 Jan 2020 00:48:56 +0800</lastBuildDate>
     
 	<atom:link href="https://shaven.github.io/categories/git/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +14,7 @@
     <item>
       <title>Git Commit 规范化</title>
       <link>https://shaven.github.io/post/git-commit-normalization/</link>
-      <pubDate>Thu, 23 Jan 2020 21:06:02 +0800</pubDate>
+      <pubDate>Fri, 24 Jan 2020 00:48:56 +0800</pubDate>
       
       <guid>https://shaven.github.io/post/git-commit-normalization/</guid>
       <description>为什么git commit要规范？ 我相信大部分人深有体会，公司有规范的您可以飘过，没有的话，特别是新入职的童鞋在阅读前辈们的git log时，说</description>
