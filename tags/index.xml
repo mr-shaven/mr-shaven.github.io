@@ -1,14 +1,33 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on 归零</title>
+    <title>Tags on 归零 - 放空心态的学习。</title>
     <link>https://shaven.github.io/tags/</link>
-    <description>Recent content in Tags on 归零</description>
+    <description>Recent content in Tags on 归零 - 放空心态的学习。</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
+    <lastBuildDate>Thu, 23 Jan 2020 21:06:02 +0800</lastBuildDate>
     
 	<atom:link href="https://shaven.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>git</title>
+      <link>https://shaven.github.io/tags/git/</link>
+      <pubDate>Thu, 23 Jan 2020 21:06:02 +0800</pubDate>
+      
+      <guid>https://shaven.github.io/tags/git/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>规范化</title>
+      <link>https://shaven.github.io/tags/%E8%A7%84%E8%8C%83%E5%8C%96/</link>
+      <pubDate>Thu, 23 Jan 2020 21:06:02 +0800</pubDate>
+      
+      <guid>https://shaven.github.io/tags/%E8%A7%84%E8%8C%83%E5%8C%96/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>

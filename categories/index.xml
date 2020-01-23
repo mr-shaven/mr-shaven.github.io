@@ -1,14 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Categories on 归零</title>
+    <title>Categories on 归零 - 放空心态的学习。</title>
     <link>https://shaven.github.io/categories/</link>
-    <description>Recent content in Categories on 归零</description>
+    <description>Recent content in Categories on 归零 - 放空心态的学习。</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
+    <lastBuildDate>Thu, 23 Jan 2020 21:06:02 +0800</lastBuildDate>
     
 	<atom:link href="https://shaven.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>git</title>
+      <link>https://shaven.github.io/categories/git/</link>
+      <pubDate>Thu, 23 Jan 2020 21:06:02 +0800</pubDate>
+      
+      <guid>https://shaven.github.io/categories/git/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>
